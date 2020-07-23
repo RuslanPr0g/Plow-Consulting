@@ -24,6 +24,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 ul {
   padding: 0;
   margin: 0;
@@ -86,13 +90,12 @@ li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-left: 9%;
+  margin-left: 9%;
   height: 100%;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   float: left;
-  color: black;
 }
 
 .header__bottom__nav-links__li {
@@ -118,23 +121,14 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-right: 11%;
+  margin-left: 55%;
   height: 100%;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  float: right;
 }
 
 @media screen and (min-width: 2888px) {
@@ -144,15 +138,28 @@ li {
   }
 }
 
+@media screen and (max-width: 990px) {
+  .header__top__links {
+    font-size: 12px;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .header {
     display: block;
   }
   .header__top__links {
+    font-size: 20px;
     margin-left: 20%;
     float: none;
     display: block;
     text-align: left;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header__top__links {
+    font-size: 15px;
   }
 }
 /*# sourceMappingURL=main.css.map */

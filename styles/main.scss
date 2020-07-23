@@ -44,6 +44,10 @@ header {
 a {
   color: black;
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 ul {
@@ -89,11 +93,10 @@ li {
   display: flex;
   @include flex_cntr();
 
-  padding-left: 9%;
+  margin-left: 9%;
   height: 100%;
   width: fit-content;
   float: left;
-  color: black;
 }
 
 .header__bottom__nav-links__li {
@@ -111,13 +114,10 @@ li {
 
 .header__bottom__social-media-links {
   display: flex;
-  @include flex_dir(row);
   @include flex_cntr();
 
-  padding-right: 11%;
+  margin-left: 55%;
   height: 100%;
-  width: fit-content;
-  float: right;
 }
 
 // MEDIA
@@ -129,14 +129,31 @@ li {
   }
 }
 
+@media screen and (max-width: 990px) {
+  .header {
+    &__top__links {
+      font-size: 12px;
+    }
+  }
+}
+
 @media screen and (max-width: 800px) {
   .header {
     display: block;
     &__top__links {
+      font-size: 20px;
       margin-left: 20%;
       float: none;
       display: block;
       text-align: left;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header {
+    &__top__links {
+      font-size: 15px;
     }
   }
 }
