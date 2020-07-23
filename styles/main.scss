@@ -157,3 +157,21 @@ li {
     }
   }
 }
+
+// toggle responsiveness media
+
+@media only screen and (max-width: 1000px) {
+  header {
+    height: 400px;
+  }
+  .header__bottom__nav-links {
+    flex-direction: column;
+  }
+  .header__bottom__nav-links__li {
+    margin-top: 20px;
+  }
+  .header__bottom__social-media-links {
+    flex-direction: column;
+    margin-left: 0;
+  }
+}

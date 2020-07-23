@@ -64,12 +64,9 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-left: 55%;
 }
 
@@ -160,6 +157,28 @@ li {
 @media screen and (max-width: 400px) {
   .header__top__links {
     font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  header {
+    height: 400px;
+  }
+  .header__bottom__nav-links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header__bottom__nav-links__li {
+    margin-top: 20px;
+  }
+  .header__bottom__social-media-links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */
