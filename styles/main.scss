@@ -118,6 +118,10 @@ li {
 
   margin-left: 55%;
   height: 100%;
+
+  &__li img {
+    width: 10px;
+  }
 }
 
 // MEDIA
@@ -158,7 +162,15 @@ li {
   }
 }
 
-// toggle responsiveness media
+@media screen and (max-width: 300px) {
+  .header {
+    &__top__links {
+      font-size: 12px;
+    }
+  }
+}
+
+// header responsiveness media
 
 @media only screen and (max-width: 1000px) {
   header {
@@ -166,12 +178,17 @@ li {
   }
   .header__bottom__nav-links {
     flex-direction: column;
-  }
-  .header__bottom__nav-links__li {
-    margin-top: 20px;
+
+    &__li {
+      margin-top: 20px;
+    }
   }
   .header__bottom__social-media-links {
     flex-direction: column;
     margin-left: 0;
+
+    &__li {
+      height: 60px;
+    }
   }
 }
