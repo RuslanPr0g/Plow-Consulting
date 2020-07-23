@@ -78,7 +78,7 @@ li {
 
 .header__top__links {
   display: flex;
-  @include flex_cntr();
+  @include flex_btw();
   margin-left: 55%;
 }
 
