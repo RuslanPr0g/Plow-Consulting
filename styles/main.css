@@ -92,6 +92,7 @@ li {
   width: -moz-fit-content;
   width: fit-content;
   float: left;
+  color: black;
 }
 
 .header__bottom__nav-links__li {
