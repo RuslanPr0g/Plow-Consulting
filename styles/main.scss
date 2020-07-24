@@ -34,6 +34,17 @@ $color4: #d55c56;
   background-color: #464646;
 }
 
+@mixin button1 {
+  color: white;
+  font-size: 20px;
+  width: 180px;
+  padding: 20px;
+  background-color: $color1;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 2px 0px $color4;
+}
+
 // **
 
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
@@ -42,6 +53,10 @@ $color4: #d55c56;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  &::selection {
+    color: #fa6c65;
+    background-color: #464646;
+  }
 }
 
 body {
@@ -177,7 +192,7 @@ li {
   &__item {
     background-color: #fff;
     width: fit-content;
-    margin: 15px 0 0 0;
+    margin: 25px 0 0 0;
     font-size: 40px;
   }
 
@@ -190,15 +205,7 @@ li {
   }
 
   &__button {
-    color: white;
-    font-size: 20px;
-    width: 180px;
-    padding: 20px;
-    background-color: $color1;
-    border-radius: 5px;
-    border: none;
-    box-shadow: 0px 2px 0px $color4;
-
+    @include button1();
     &:hover {
       background-color: #f1524a;
     }
@@ -220,8 +227,13 @@ li {
 
 @media screen and (max-width: 990px) {
   .header {
-    &__top__links {
-      font-size: 12px;
+    &__top {
+      &__links {
+        font-size: 12px;
+      }
+    }
+    &__bottom {
+      padding-bottom: 40px;
     }
   }
 }

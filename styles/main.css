@@ -6,6 +6,16 @@
           box-sizing: border-box;
 }
 
+*::-moz-selection {
+  color: #fa6c65;
+  background-color: #464646;
+}
+
+*::selection {
+  color: #fa6c65;
+  background-color: #464646;
+}
+
 body {
   font-family: "Oswald", sans-serif;
 }
@@ -185,7 +195,7 @@ li {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin: 15px 0 0 0;
+  margin: 25px 0 0 0;
   font-size: 40px;
 }
 
@@ -223,6 +233,9 @@ li {
 @media screen and (max-width: 990px) {
   .header__top__links {
     font-size: 12px;
+  }
+  .header__bottom {
+    padding-bottom: 40px;
   }
 }
 
