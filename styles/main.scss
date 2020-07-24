@@ -166,6 +166,7 @@ li {
   display: flex;
   @include flex_dir(column);
   @include flex_cntr();
+  text-align: center;
 
   height: 80vh;
 
@@ -174,7 +175,6 @@ li {
   @include image_style();
 
   &__item {
-    text-align: center;
     background-color: #fff;
     width: fit-content;
     margin: 15px 0 0 0;

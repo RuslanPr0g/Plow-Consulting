@@ -170,6 +170,7 @@ li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
   height: 80vh;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/Layer 9.png");
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/Layer 9.png");
@@ -180,7 +181,6 @@ li {
 }
 
 .main__welcome__item {
-  text-align: center;
   background-color: #fff;
   width: -webkit-fit-content;
   width: -moz-fit-content;
