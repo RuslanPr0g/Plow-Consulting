@@ -1,3 +1,10 @@
+$overlay_color: rgba(0, 0, 0, 0.5);
+
+$color1: #fa6c65;
+$color2: #fbfbfb;
+$color3: #939393;
+$color4: #d55c56;
+
 @mixin flex_dir($dir) {
   display: flex;
   flex-direction: $dir;
@@ -18,6 +25,13 @@
 @mixin flex_cntr {
   align-items: center;
   justify-content: center;
+}
+
+@mixin image_style {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #464646;
 }
 
 // **
@@ -43,7 +57,7 @@ header {
 
   margin: auto;
   overflow: hidden;
-  padding: 10px;
+  padding: 10px 10px 0 10px;
 }
 
 a {
@@ -64,6 +78,12 @@ li {
   list-style: none;
   margin-left: 20px;
 }
+
+.upper-case {
+  text-transform: uppercase;
+}
+
+// Header
 
 .header__top {
   flex: 1;
@@ -87,7 +107,7 @@ li {
 }
 
 .header__bottom {
-  background-color: #fbfbfb;
+  background-color: $color2;
   height: 100%;
   width: 100%;
   border-bottom: 1px solid #e9e9e9;
@@ -123,12 +143,71 @@ li {
   margin-left: 55%;
   height: 100%;
 
+  &__li {
+    display: flex;
+    @include flex_cntr();
+
+    padding: 9px;
+    border-radius: 60%;
+    border: 1px solid #bebebe;
+    height: 40px;
+    width: 40px;
+  }
+
   &__li img {
     width: 10px;
   }
 }
 
+// MAIN
+// WELCOME BLOCK
+
+.main__welcome {
+  display: flex;
+  @include flex_dir(column);
+  @include flex_cntr();
+
+  height: 80vh;
+
+  background: linear-gradient(0deg, $overlay_color, $overlay_color),
+    url("../img/Layer 9.png");
+  @include image_style();
+
+  &__item {
+    text-align: center;
+    background-color: #fff;
+    width: fit-content;
+    margin: 15px 0 0 0;
+    font-size: 40px;
+  }
+
+  & h2 {
+    padding: 15px;
+  }
+
+  & p {
+    padding: 10px;
+  }
+
+  &__button {
+    color: white;
+    font-size: 20px;
+    width: 180px;
+    padding: 20px;
+    background-color: $color1;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 2px 0px $color4;
+
+    &:hover {
+      background-color: #f1524a;
+    }
+  }
+}
+
 // MEDIA
+
+// TV
 
 @media screen and (min-width: 2888px) {
   body {
@@ -137,6 +216,8 @@ li {
   }
 }
 
+// tablets
+
 @media screen and (max-width: 990px) {
   .header {
     &__top__links {
@@ -144,6 +225,8 @@ li {
     }
   }
 }
+
+// usual phones
 
 @media screen and (max-width: 800px) {
   .header {
@@ -155,7 +238,20 @@ li {
       margin-top: 0;
     }
   }
+  .main__welcome {
+    &__item {
+      font-size: 20px;
+    }
+    & p {
+      width: 80%;
+    }
+    & h2 {
+      width: 50%;
+    }
+  }
 }
+
+// small
 
 @media screen and (max-width: 400px) {
   .header {
@@ -165,10 +261,17 @@ li {
   }
 }
 
+// extra small
+
 @media screen and (max-width: 300px) {
   .header {
     &__top__links {
       font-size: 12px;
+    }
+  }
+  .main__welcome {
+    &__item {
+      font-size: 15px;
     }
   }
 }
@@ -192,6 +295,7 @@ li {
 
     &__li {
       height: 60px;
+      border: none;
     }
   }
 }
