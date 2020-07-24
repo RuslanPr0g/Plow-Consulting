@@ -98,6 +98,10 @@ li {
   text-transform: uppercase;
 }
 
+.main-block {
+  height: 80vh;
+}
+
 // Header
 
 .header__top {
@@ -183,8 +187,6 @@ li {
   @include flex_cntr();
   text-align: center;
 
-  height: 80vh;
-
   background: linear-gradient(0deg, $overlay_color, $overlay_color),
     url("../img/Layer 9.png");
   @include image_style();
@@ -208,6 +210,28 @@ li {
     @include button1();
     &:hover {
       background-color: #f1524a;
+    }
+  }
+}
+
+// How It Works
+
+.title {
+  display: flex;
+  @include flex_cntr();
+  color: $color1;
+  padding: 20px;
+  height: 20%;
+
+  &__subtitle {
+    margin-left: 20px;
+    font-weight: 300;
+    color: $color3;
+
+    &::before {
+      content: "|";
+      color: $color1;
+      margin-right: 15px;
     }
   }
 }
