@@ -236,6 +236,58 @@ li {
   }
 }
 
+.main__how-it-works__process {
+  width: 80%;
+  margin: auto;
+
+  & ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  & li {
+    width: 50%;
+    flex: 1 0 40%;
+    & .process-block {
+      display: flex;
+      @include flex_dir(row);
+      margin: 40px;
+      & .number {
+        margin-right: 10px;
+        width: 20%;
+        font-size: 50px;
+        color: $color1;
+      }
+    }
+  }
+
+  &__content {
+    &__title {
+      font-size: 20px;
+      padding: 10px;
+      font-weight: 700;
+    }
+    &__descript {
+      font-size: 18px;
+      padding: 10px;
+    }
+    &__details ul {
+      display: flex;
+      flex-direction: column;
+      & li {
+        list-style: circle;
+        width: 90%;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.collect-ideas {
+  border-right: 1px solid $color2;
+}
+
 // MEDIA
 
 // TV
@@ -285,6 +337,10 @@ li {
       width: 50%;
     }
   }
+
+  .title {
+    font-size: 10px;
+  }
 }
 
 // small
@@ -309,6 +365,15 @@ li {
     &__item {
       font-size: 15px;
     }
+    & p {
+      display: none;
+    }
+  }
+  .title__subtitle {
+    display: none;
+  }
+  .number {
+    display: none;
   }
 }
 
