@@ -18,6 +18,7 @@
 
 body {
   font-family: "Oswald", sans-serif;
+  color: #616161;
 }
 
 header {
@@ -213,7 +214,6 @@ li {
 .main__welcome__button {
   color: white;
   font-size: 20px;
-  width: 180px;
   padding: 20px;
   background-color: #fa6c65;
   border-radius: 5px;
@@ -239,18 +239,26 @@ li {
   color: #fa6c65;
   padding: 20px;
   height: 20%;
+  text-transform: uppercase;
 }
 
 .title__subtitle {
   margin-left: 20px;
   font-weight: 300;
   color: #939393;
+  text-transform: none;
 }
 
 .title__subtitle::before {
   content: "|";
   color: #fa6c65;
   margin-right: 15px;
+}
+
+.main__how-it-works {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .main__how-it-works__process {
@@ -320,8 +328,63 @@ li {
   font-size: 15px;
 }
 
-.collect-ideas {
-  border-right: 1px solid #fbfbfb;
+.main__latest {
+  background-color: #fbfbfb;
+}
+
+.preview {
+  width: 50%;
+}
+
+.main__latest__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 30px;
+}
+
+.main__latest__content__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 30%;
+  margin-left: 40px;
+}
+
+.main__latest__content__block__title {
+  font-size: 50px;
+}
+
+.main__latest__content__block__descript {
+  margin: 30px 0 30px 0;
+}
+
+.main__latest__content__block__button {
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  background-color: #fa6c65;
+  border-radius: 5px;
+  border: none;
+  -webkit-box-shadow: 0px 2px 0px #d55c56;
+          box-shadow: 0px 2px 0px #d55c56;
+  font-size: 15px;
+  width: 120px;
+  height: 50px;
 }
 
 @media screen and (min-width: 2888px) {
