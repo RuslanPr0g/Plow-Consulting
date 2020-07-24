@@ -45,6 +45,10 @@ $footer_bottom: #2d3134;
   border-radius: 5px;
   border: none;
   box-shadow: 0px 2px 0px $color4;
+
+  &:hover {
+    background-color: #f1524a;
+  }
 }
 
 // **
@@ -103,6 +107,7 @@ li {
 
 .main-block {
   height: 80vh;
+  padding: 30px;
 }
 
 // Header
@@ -211,9 +216,6 @@ li {
 
   &__button {
     @include button1();
-    &:hover {
-      background-color: #f1524a;
-    }
   }
 }
 
@@ -261,7 +263,6 @@ li {
     & .process-block {
       display: flex;
       @include flex_dir(row);
-      margin: 40px;
       & .number {
         margin-right: 10px;
         width: 20%;
@@ -269,6 +270,10 @@ li {
         color: $color1;
       }
     }
+  }
+
+  .process-list-item {
+    padding: 40px;
   }
 
   &__content {
@@ -297,6 +302,7 @@ li {
 
 .main__latest {
   background-color: $color2;
+  height: fit-content;
 }
 
 .preview {
@@ -372,20 +378,49 @@ li {
       margin-top: 0;
     }
   }
-  .main__welcome {
-    &__item {
-      font-size: 20px;
+
+  .main {
+    &__welcome {
+      &__item {
+        font-size: 20px;
+      }
+      & p {
+        width: 80%;
+      }
+      & h2 {
+        width: 50%;
+      }
     }
-    & p {
-      width: 80%;
-    }
-    & h2 {
-      width: 50%;
+  }
+
+  .main__how-it-works__process {
+    width: 100%;
+  }
+
+  .main__how-it-works__process__content {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 9px;
+  }
+
+  .preview {
+    display: none;
+  }
+
+  .main__latest__content {
+    display: block;
+    &__block {
+      width: 70%;
     }
   }
 
   .title {
-    font-size: 10px;
+    font-size: 30px;
+    &__subtitle {
+      display: none;
+    }
   }
 }
 
@@ -396,6 +431,10 @@ li {
     &__top__links {
       font-size: 15px;
     }
+  }
+
+  .number {
+    display: none;
   }
 }
 
@@ -414,12 +453,6 @@ li {
     & p {
       display: none;
     }
-  }
-  .title__subtitle {
-    display: none;
-  }
-  .number {
-    display: none;
   }
 }
 

@@ -61,6 +61,7 @@ li {
 
 .main-block {
   height: 80vh;
+  padding: 30px;
 }
 
 .header__top {
@@ -291,7 +292,6 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 40px;
 }
 
 .main__how-it-works__process li .process-block .number {
@@ -299,6 +299,10 @@ li {
   width: 20%;
   font-size: 50px;
   color: #fa6c65;
+}
+
+.main__how-it-works__process .process-list-item {
+  padding: 40px;
 }
 
 .main__how-it-works__process__content__title {
@@ -330,6 +334,9 @@ li {
 
 .main__latest {
   background-color: #fbfbfb;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .preview {
@@ -387,6 +394,10 @@ li {
   height: 50px;
 }
 
+.main__latest__content__block__button:hover {
+  background-color: #f1524a;
+}
+
 @media screen and (min-width: 2888px) {
   body {
     width: 2888px;
@@ -422,14 +433,38 @@ li {
   .main__welcome h2 {
     width: 50%;
   }
+  .main__how-it-works__process {
+    width: 100%;
+  }
+  .main__how-it-works__process__content {
+    width: 100%;
+  }
   .title {
-    font-size: 10px;
+    font-size: 9px;
+  }
+  .preview {
+    display: none;
+  }
+  .main__latest__content {
+    display: block;
+  }
+  .main__latest__content__block {
+    width: 70%;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .title__subtitle {
+    display: none;
   }
 }
 
 @media screen and (max-width: 400px) {
   .header__top__links {
     font-size: 15px;
+  }
+  .number {
+    display: none;
   }
 }
 
@@ -441,12 +476,6 @@ li {
     font-size: 15px;
   }
   .main__welcome p {
-    display: none;
-  }
-  .title__subtitle {
-    display: none;
-  }
-  .number {
     display: none;
   }
 }
