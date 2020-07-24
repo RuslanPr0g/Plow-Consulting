@@ -340,6 +340,50 @@ li {
 
 // FOOTER
 
+.footer {
+  display: flex;
+  @include flex_dir(column);
+  margin: 0;
+  padding: 0;
+
+  color: white;
+
+  &__top {
+    background-color: $footer_top;
+    height: 100%;
+    display: flex;
+    @include flex_cntr();
+
+    &__links {
+      display: flex;
+      @include flex_dir(row);
+      @include flex_cntr();
+
+      height: 70%;
+      padding: 0px 20px 0px 20px;
+
+      &__item {
+        margin: 0px 30px 0px 30px;
+        &__title {
+          text-transform: uppercase;
+          padding: 20px;
+        }
+        &__desc p {
+          padding: 0px 10px 20px 20px;
+          width: 300px;
+        }
+      }
+    }
+  }
+  &__bottom {
+    display: flex;
+    @include flex_cntr();
+    background-color: $footer_bottom;
+    height: 15%;
+    font-size: 30px;
+  }
+}
+
 // MEDIA
 
 // TV
@@ -348,6 +392,19 @@ li {
   body {
     width: 2888px;
     margin: auto;
+  }
+}
+
+// big tablet
+
+@media screen and (max-width: 1480px) {
+  .footer {
+    height: fit-content;
+  }
+  .footer__top__links {
+    padding: 40px 0px 50px 0px;
+
+    flex-direction: column;
   }
 }
 
@@ -422,6 +479,10 @@ li {
       display: none;
     }
   }
+
+  .footer__bottom {
+    font-size: 20px;
+  }
 }
 
 // small
@@ -435,6 +496,10 @@ li {
 
   .number {
     display: none;
+  }
+
+  .footer__bottom {
+    font-size: 17px;
   }
 }
 

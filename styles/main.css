@@ -398,10 +398,101 @@ li {
   background-color: #f1524a;
 }
 
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.footer__top {
+  background-color: #303538;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer__top__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 70%;
+  padding: 0px 20px 0px 20px;
+}
+
+.footer__top__links__item {
+  margin: 0px 30px 0px 30px;
+}
+
+.footer__top__links__item__title {
+  text-transform: uppercase;
+  padding: 20px;
+}
+
+.footer__top__links__item__desc p {
+  padding: 0px 10px 20px 20px;
+  width: 300px;
+}
+
+.footer__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #2d3134;
+  height: 15%;
+  font-size: 30px;
+}
+
 @media screen and (min-width: 2888px) {
   body {
     width: 2888px;
     margin: auto;
+  }
+}
+
+@media screen and (max-width: 1480px) {
+  .footer {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .footer__top__links {
+    padding: 40px 0px 50px 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -457,6 +548,9 @@ li {
   .title__subtitle {
     display: none;
   }
+  .footer__bottom {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -465,6 +559,9 @@ li {
   }
   .number {
     display: none;
+  }
+  .footer__bottom {
+    font-size: 17px;
   }
 }
 
